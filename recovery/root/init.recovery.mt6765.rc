@@ -58,8 +58,9 @@ service guardianangle  /system/bin/guardianangle
 
 service vivofbe /system/bin/vivofbe
     user root
-    group root drmrpc
+    group root
     disabled
+    oneshot
     seclabel u:r:recovery:s0
 
 on property:hwservicemanager.ready=true
